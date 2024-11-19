@@ -10,6 +10,13 @@ public class SCANNER {
 
         public Person(){}
 
+        public Person(String FirstName, String LastName, short Age, String Address)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Age = Age;
+            this.Address = Address;
+        }
     }
     public static void main(String[] args) {
 
