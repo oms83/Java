@@ -34,7 +34,8 @@ public class InheritanceP1 {
 
     public static class clsPerson
     {
-        private int _Id = 0;
+        private static int _AutoIncrementId = 0;
+        private int _Id;
         private String _fName;
         private String _lName;
         private short _age;
@@ -90,14 +91,15 @@ public class InheritanceP1 {
             this.set_fName(fName);
             this.set_lName(lName);
             this.set_age(age);
-            this._Id++;
+            this._Id = ++_AutoIncrementId;
 
             Country.setId(countryId);
         }
 
         @Override
         public String toString() {
-            return "Full Name: " + this._fName + " " + this._lName +
+            return "Id: " + this._Id +
+                   "\nFull Name: " + this._fName + " " + this._lName +
                    "\nAge: " + this.get_age() +
                    "\nCountry: " + this.Country.get_country();
         }
@@ -136,7 +138,8 @@ public class InheritanceP1 {
         public void set_salary(float salary)
         {
             // 🤣
-            this._salary = salary < 17002 ? 17002 : salary ;
+            // this._salary = salary < 17002 ? 17002 : salary ;
+            this._salary = Math.max(salary, 17002);
         }
 
         @Override
