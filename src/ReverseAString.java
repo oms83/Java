@@ -1,11 +1,11 @@
 public class ReverseAString {
-    private static String _ReverseAString(String source)
+    private static String _ReverseAString(String str)
     {
         StringBuilder reversed = new StringBuilder();
 
-        for (int i=source.length()-1; i>=0; i--)
+        for (int i=str.length()-1; i>=0; i--)
         {
-            reversed.append(source.charAt(i));
+            reversed.append(str.charAt(i));
         }
 
         return reversed.toString();
