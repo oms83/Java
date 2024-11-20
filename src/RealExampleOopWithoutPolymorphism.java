@@ -15,7 +15,7 @@ public class RealExampleOopWithoutPolymorphism {
             System.out.println("\n----------------------------");
             System.out.println("Credit Card Payment Method");
             System.out.println("Commission: " + commission);
-            System.out.println("Amount: " + commission);
+            System.out.println("Amount: " + _amount);
             System.out.println("Total Amount: " + this._amount + commission);
         }
 
@@ -26,7 +26,7 @@ public class RealExampleOopWithoutPolymorphism {
             System.out.println("\n----------------------------");
             System.out.println("Remit Payment Method");
             System.out.println("Commission: " + commission);
-            System.out.println("Amount: " + commission);
+            System.out.println("Amount: " + _amount);
             System.out.println("Total Amount: " + this._amount + commission);
         }
 
@@ -37,7 +37,7 @@ public class RealExampleOopWithoutPolymorphism {
             System.out.println("\n----------------------------");
             System.out.println("Payment At The Door Method");
             System.out.println("Commission: " + commission);
-            System.out.println("Amount: " + commission);
+            System.out.println("Amount: " + _amount);
             System.out.println("Total Amount: " + this._amount + commission);
         }
     }
