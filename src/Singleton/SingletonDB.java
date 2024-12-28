@@ -1,3 +1,5 @@
+package Singleton;
+
 public class SingletonDB {
     public static class clsDatabase
     {
