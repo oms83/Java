@@ -1,6 +1,6 @@
 package Factory;
 
-public class AnimalEx {
+public class Animals {
     public static class AnimalFactory {
         enum enType{dog, cat, duck}
         public static IAnimal getAnimals(enType en)
