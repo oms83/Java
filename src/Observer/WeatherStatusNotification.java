@@ -17,7 +17,6 @@ public class WeatherStatusNotification {
         void removeObserver(IObserver observer);
     }
 
-
     public static class Subject  implements ISubject
     {
         private final List<IObserver> observers;
@@ -55,7 +54,6 @@ public class WeatherStatusNotification {
             this.humidity = humidity;
         }
     }
-
 
     public static class CurrentConditionsDisplay implements IObserver
     {
