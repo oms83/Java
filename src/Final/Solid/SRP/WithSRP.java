@@ -1,28 +1,36 @@
-package Final.SRP;
+package Final.Solid.SRP;
 
-public class WithoutSRP {
-
+public class WithSRP {
     public static class NotificationService
     {
         enum enServiceType {SMS, FAX, EMAIL}
         public void Notify(String to, String body, enServiceType serviceType) {
-            if (enServiceType.EMAIL == serviceType) {
-                _SendEmail(to, body);
+            if (NotificationService.enServiceType.EMAIL == serviceType) {
+                EmailService.SendEmail(to, body);
             }
-            else if (enServiceType.SMS == serviceType) {
-                _SendSMS(to, body);
+            else if (NotificationService.enServiceType.SMS == serviceType) {
+                SMSService.SendSMS(to, body);
             }
             else {
-                _SendFax(to, body);
+                FaxService.SendFax(to, body);
             }
         }
-        private void _SendEmail(String to, String body) {
+    }
+
+    public static class EmailService {
+        public static void SendEmail(String to, String body) {
             System.out.println("To: " + to + " Body: " + body);
         }
-        private void _SendFax(String to, String body) {
+    }
+
+    public static class SMSService {
+        public static void SendSMS(String to, String body) {
             System.out.println("To: " + to + " Body: " + body);
         }
-        private void _SendSMS(String to, String body) {
+    }
+
+    public static class FaxService {
+        public static void SendFax(String to, String body) {
             System.out.println("To: " + to + " Body: " + body);
         }
     }
